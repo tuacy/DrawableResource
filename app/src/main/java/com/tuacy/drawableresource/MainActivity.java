@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.tuacy.drawableresource.clip.ClipActivity;
 import com.tuacy.drawableresource.scale.ScaleActivity;
+import com.tuacy.drawableresource.shape.ShapeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View view) {
 				ScaleActivity.startUp(mContext);
+			}
+		});
+
+		findViewById(R.id.button_drawable_resource_shape).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				ShapeActivity.startUp(mContext);
 			}
 		});
 	}

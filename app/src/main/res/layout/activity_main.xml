@@ -6,6 +6,13 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/button_drawable_resource_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="可绘制对象资源(shape)"
+        android:textAllCaps="false"/>
+
+    <Button
         android:id="@+id/button_drawable_resource_clip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
