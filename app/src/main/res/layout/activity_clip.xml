@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <View
+        android:id="@+id/view_progress"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/drawable_clip_progress"/>
+
     <ImageView
         android:id="@+id/image_clip"
         android:layout_width="match_parent"
@@ -25,13 +32,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Level 1000"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/button_level_5000"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Level 5000"
         android:textAllCaps="false" />
 
     <Button

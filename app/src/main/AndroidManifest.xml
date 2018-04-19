@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,9 +18,34 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".clip.ClipActivity"/>
-        <activity android:name=".scale.ScaleActivity" />
-        <activity android:name=".shape.ShapeActivity" />
+        <activity
+            android:name=".ClipDrawable.ClipDrawableActivity"
+            android:label="ClipDrawable" />
+
+        <activity
+            android:name=".ScaleDrawable.ScaleDrawableActivity"
+            android:label="ScaleDrawable" />
+
+        <activity
+            android:name=".GradientDrawable.GradientDrawableActivity"
+            android:label="GradientDrawable" />
+
+        <activity
+            android:name=".InsetDrawable.InsetDrawableActivity"
+            android:label="InsetDrawable" />
+
+        <activity
+            android:name=".LevelListDrawable.LevelListDrawableActivity"
+            android:label="LevelListDrawable" />
+
+        <activity
+            android:name=".LayerDrawable.LayerDrawableActivity"
+            android:label="LayerDrawable" />
+
+        <activity
+            android:name=".TransitionDrawable.TransitionDrawableActivity"
+            android:label="TransitionDrawable" />
+
     </application>
 
 </manifest>

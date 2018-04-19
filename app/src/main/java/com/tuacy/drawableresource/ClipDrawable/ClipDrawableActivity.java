@@ -1,4 +1,4 @@
-package com.tuacy.drawableresource.scale;
+package com.tuacy.drawableresource.ClipDrawable;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -10,23 +10,26 @@ import android.widget.ImageView;
 
 import com.tuacy.drawableresource.R;
 
-public class ScaleActivity extends AppCompatActivity {
+public class ClipDrawableActivity extends AppCompatActivity {
 
 	public static void startUp(Context context) {
-		context.startActivity(new Intent(context, ScaleActivity.class));
+		context.startActivity(new Intent(context, ClipDrawableActivity.class));
 	}
 
 	private ImageView mImageClip;
+	private View      mViewProgress;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_scale);
+		setContentView(R.layout.activity_clip);
 		initView();
 	}
 
 	private void initView() {
-		mImageClip = findViewById(R.id.image_drawable_scale);
+		mViewProgress = findViewById(R.id.view_progress);
+		mImageClip = findViewById(R.id.image_clip);
+		mImageClip.getBackground().setLevel(1000);
 
 		findViewById(R.id.button_level_0).setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -39,13 +42,6 @@ public class ScaleActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View view) {
 				mImageClip.getBackground().setLevel(1000);
-			}
-		});
-
-		findViewById(R.id.button_level_5000).setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				mImageClip.getBackground().setLevel(5000);
 			}
 		});
 
@@ -77,6 +73,16 @@ public class ScaleActivity extends AppCompatActivity {
 				valueAnimator.start();
 			}
 		});
-	}
 
+		ValueAnimator valueAnimator = ValueAnimator.ofInt(0, 10000);
+		valueAnimator.setDuration(6000);
+		valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+			@Override
+			public void onAnimationUpdate(ValueAnimator animation) {
+				mViewProgress.getBackground().setLevel((Integer) animation.getAnimatedValue());
+			}
+		});
+		valueAnimator.setRepeatCount(-1);
+		valueAnimator.start();
+	}
 }

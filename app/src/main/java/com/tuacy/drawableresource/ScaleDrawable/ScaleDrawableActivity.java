@@ -1,4 +1,4 @@
-package com.tuacy.drawableresource.clip;
+package com.tuacy.drawableresource.ScaleDrawable;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -10,10 +10,10 @@ import android.widget.ImageView;
 
 import com.tuacy.drawableresource.R;
 
-public class ClipActivity extends AppCompatActivity {
+public class ScaleDrawableActivity extends AppCompatActivity {
 
 	public static void startUp(Context context) {
-		context.startActivity(new Intent(context, ClipActivity.class));
+		context.startActivity(new Intent(context, ScaleDrawableActivity.class));
 	}
 
 	private ImageView mImageClip;
@@ -21,12 +21,12 @@ public class ClipActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_clip);
+		setContentView(R.layout.activity_scale);
 		initView();
 	}
 
 	private void initView() {
-		mImageClip = findViewById(R.id.image_clip);
+		mImageClip = findViewById(R.id.image_drawable_scale);
 
 		findViewById(R.id.button_level_0).setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -78,4 +78,5 @@ public class ClipActivity extends AppCompatActivity {
 			}
 		});
 	}
+
 }

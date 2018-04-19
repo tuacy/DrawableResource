@@ -1,4 +1,4 @@
-package com.tuacy.drawableresource.shape;
+package com.tuacy.drawableresource.GradientDrawable;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,10 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.tuacy.drawableresource.R;
 
-public class ShapeActivity extends AppCompatActivity {
+public class GradientDrawableActivity extends AppCompatActivity {
 
 	public static void startUp(Context context) {
-		context.startActivity(new Intent(context, ShapeActivity.class));
+		context.startActivity(new Intent(context, GradientDrawableActivity.class));
 	}
 
 

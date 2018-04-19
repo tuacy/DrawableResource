@@ -27,4 +27,32 @@
         android:textAllCaps="false"/>
 
 
+    <Button
+        android:id="@+id/button_drawable_resource_inset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="插入可绘制对象（InsetDrawable ）"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/button_drawable_resource_level_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="级别列表（LevelListDrawable）"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/button_drawable_resource_layer_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图层列表(LayerDrawable)"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/button_drawable_resource_transition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="转换可绘制对象（TransitionDrawable）"
+        android:textAllCaps="false"/>
+
 </LinearLayout>
